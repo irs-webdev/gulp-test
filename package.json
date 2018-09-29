@@ -5,11 +5,11 @@
   "author": "irs-webdev",
   "license": "ISC",
   "devDependencies": {
+    "browserify": "^16.2.3",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-copy": "^4.0.0",
     "gulp-sass": "^4.0.1",
-    "browserify": "^16.2.3",
-    "del": "^3.0.0",
     "run-sequence": "^2.2.1",
     "vinyl-source-stream": "^2.0.0"
   },

@@ -3,7 +3,7 @@ var sass = require('gulp-sass');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var del = require('del');
-const runSequence = require('run-sequence');
+var runSequence = require('run-sequence');
 
 gulp.task('clean', function() {
 	del.sync(['dist']);
@@ -34,6 +34,8 @@ gulp.task('build', function() {
 })
 
 gulp.task('default',function() {
-	runSequence(['clean'], ['styles', 'scripts', 'copy']);
-    gulp.watch('app/*',['styles']);
+	runSequence('clean', ['styles', 'scripts', 'copy']);
+    gulp.watch('app/*',['copy']);
+    gulp.watch('app/js/*',['scripts']);
+    gulp.watch('app/scss/*',['styles']);
 });

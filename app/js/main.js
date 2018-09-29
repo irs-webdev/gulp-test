@@ -1,6 +1,6 @@
 
 var $ = require('jquery');
 
-console.log("1111");
+console.log("Hello js!");
 
 $('body').css('background', '#aae');
